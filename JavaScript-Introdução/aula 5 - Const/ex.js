@@ -9,7 +9,7 @@ const anoDeNascimento = 2003;
 const idade = 2022 - anoDeNascimento;
 const peso = 50;
 const alturaemM = 1.7;
-const imc = peso / (alturaemM * alturaemM);
+const imc = peso / (alturaemM ** 2);
 
 console.log('Usando ","');
 console.log("")
