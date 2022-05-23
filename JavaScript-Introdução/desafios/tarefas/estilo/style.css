@@ -1,0 +1,57 @@
+*{
+   margin: 0px;
+   box-sizing: border-box;
+}
+body{
+   background-color: skyblue;
+   width: 100vw;
+   height: 100vh;
+}
+div.container-tarefas{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   background-color: rgba(58, 56, 56, 0.527);
+   padding: 20px;
+   width: 80vw;
+   margin: 20px auto;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border: 1px solid white;
+}
+div.container-tarefas h1{
+   color: white;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 20px;
+}
+div.container-tarefas .containet-input{
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+div.container-tarefas .containet-input input{
+   border: 2px solid white;
+   border-radius: 5px;
+   background-color: rgba(58, 56, 56, 0.329);
+   width: 65vw;
+   text-align: center;
+   margin: 30px auto;
+   color: gray;
+   padding: 10px;
+}
+div.container-tarefas .containet-input img{
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: 95%;
+   bottom: 34%;
+   cursor: pointer;
+}
+div.container-tarefas .tarefas{
+   text-align: center;
+   color: white;
+   font-size: 1.2em;
+   border: 2px solid white;
+   padding: 10px;
+}
