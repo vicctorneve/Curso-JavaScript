@@ -21,7 +21,7 @@ console.log("")
 console.log(nome + ' ' + sobrenome + ' nasceu em ' + anoDeNascimento + ' e tem ' + idade + ' anos, pesa ' + peso + 'kg e tem ' + alturaemM + ' de altura e seu IMC é de ' + imc + '.')
 
 console.log('')
-console.log('Usando "`${}´"');
+console.log('Usando "`${}`"');
 console.log("")
 console.log(`${nome} ${sobrenome} nasceu em ${anoDeNascimento} e tem ${idade} anos, pesa ${peso} kg e tem ${alturaemM} de altura e seu IMC é de ${imc.toFixed(2)}.`)
 
