@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="estilo/style.css">
+   <title>Calculadora Freelancer</title>
+</head>
+<body>
+   <section class="">
+      <form class="calculadora">
+         <div class="title">
+            <h1>Calculator Freelancer</h1>
+         </div>
+         <div class="content">
+            <div class="container-input"> <!--Nome do freelancer-->
+               <p>Digite seu nome:</p>
+               <input type="text" name="nomefreelancer" id="nomefreelancer" required>
+            </div>
+            <div class="container-input"> <!--nome do cliente-->
+               <p>Digite o nome do cliente:</p>
+               <input type="text" name="nomecliente" id="nomecliente" required>
+            </div>
+            <div class="container-input"> <!--Taxa por hora-->
+               <p>Digite sua taxa por hora trabalhada:</p>
+               <input type="number" name="taxahora" id="taxahora" placeholder="R$: 40" required>
+            </div>
+            <div class="checkbox">
+               <input type="checkbox" name="check" id="check" value="sim" >
+               <p>Orçamento fixo</p>
+            </div>
+            <div class="container-input container-orcamento">
+               <p>Digite o valor do orçamento: </p>
+               <input type="number" name="orcamento" id="orcamento" placeholder="R$: 4.000">
+               
+            </div>
+            
+            <div class="send">
+               <input onclick="calcular()" type="submit" value="CALCULAR" id="send">
+               <input type="reset" value="RESET" id="reset">
+            </div>
+            <div class="container-resultado">
+               
+            </div>
+            <script src="js/script.js"></script>
+         </div>
+      </form>
+   </section>
+</body>
+</html>
