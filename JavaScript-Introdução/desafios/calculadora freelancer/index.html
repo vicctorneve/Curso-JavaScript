@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
    <link rel="stylesheet" href="estilo/style.css">
-   <title>Calculadora Freelancer</title>
 </head>
 <body>
-   <section class="">
-      <form class="calculadora">
-         <div class="title">
-            <h1>Calculator Freelancer</h1>
+   <section>
+      <form id="calculadora">
+         <h1>Calculadora Freelancer</h1>
+         <div class="container-result" id="container-result">
+            <!--
+               <p>Taxa por hora: R$ 30</p>
+               <p>Taxa Diaria: R$ 320</p>
+               <p>Orçamento: 10.000</p>
+               <p>Dias uteis: 40</p>
+               <p>Desconto: 40%</p>
+               <p>Valor Mensal:</p>
+               <p>Valor total:</p>
+            -->
          </div>
-         <div class="content">
+         <div class="container">
             
-            <div class="container-input"> <!--Taxa por hora-->
-               <p>Digite sua taxa por hora trabalhada:</p>
-               <input type="number" id="taxahora" placeholder="R$: 40" required>
+            <div class="container-input">
+               <h2>Taxa por hora:</h2>
+               <input type="number" id="taxahora" placeholder="R$:25" required>
             </div>
-            <div class="checkbox">
-               <input type="checkbox" id="check" value="sim" >
-               <p>Orçamento fixo</p>
+            <div class=" container-checkbox">
+               <input type="checkbox" id="check" value="sim">
+               <h2>Orçamento fixo:</h2>
             </div>
             <div class="container-input container-orcamento">
-               <p>Digite o valor do orçamento: </p>
-               <input type="number" id="orcamento" placeholder="R$: 4.000">
-               
+               <h2>Orçamento:</h2>
+               <input type="number" id="orcamento" placeholder="R$:10000" required>
             </div>
-            
-            <div class="send">
-               <input onclick="calcular()" type="button" value="CALCULAR" id="send">
-               <input type="reset" value="RESET" id="reset">
-            </div>
-            <div id="container-resultado">
-               <div id="texto">
-                  
-               </div>
-            </div>
-            <script src="js/script.js"></script>
          </div>
+         <div class="btn">
+            <input onclick="calcular()" type="button" value="Calcular">
+            <input onclick="reset()" type="reset" value="Resetar" id="btn-reset">
+         </div>
+         <script src="js/script.js"></script>
       </form>
    </section>
 </body>
