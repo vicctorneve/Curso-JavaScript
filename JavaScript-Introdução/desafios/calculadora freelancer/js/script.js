@@ -5,7 +5,7 @@ let taxaHora = document.querySelector('#taxahora');
 let orcamento = document.querySelector('#orcamento');
 let diasUteis;
 
-let result = document.querySelector('#container-resultado');
+let result = document.querySelector('#texto');
 
 send.addEventListener( calcular);
 
@@ -20,6 +20,6 @@ function calcular(){
 
    orcamento = orcamento.value;
    diasUteis = orcamento / taxaDiaria;
-   
+   result.innerHTML += `<p> Dias para realizar o projeto: ${Math.round(diasUteis) } </p>`;
 
 }
