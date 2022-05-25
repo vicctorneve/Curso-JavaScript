@@ -1,14 +1,25 @@
 // SCRIPT CALCULADORA FREELANCER
 let horaJob = 8;
-let taxaHora; //pegar valor do input
-let taxaDiaria = taxaHora * horaJob;
+let taxaDiaria;
+let taxaHora = document.querySelector('#taxahora');
+let orcamento = document.querySelector('#orcamento');
+let diasUteis;
 
-// 2
+let result = document.querySelector('#container-resultado');
 
-let orcamento; //pegar valor do input
-let diasUteis = orcamento / taxaDiaria;
+send.addEventListener( calcular);
 
 function calcular(){
-   taxaHora = document.getElementById('taxahora').value;
-   document.getElementById('container-resultado').innerHTML += `<p>Taxa pora hora trabalhada: R$:${taxaHora}</p>`;
+   // Taxa por hora trbalhada
+   taxaHora = taxaHora.value;
+   result.innerHTML += `<p> Taxa por hora trabalhada: ${taxaHora} </p>`;
+
+   //taxa Diaria
+   taxaDiaria = taxaHora * horaJob;
+   result.innerHTML += `<p> Taxa diaria: ${taxaDiaria} </p>`;
+
+   orcamento = orcamento.value;
+   diasUteis = orcamento / taxaDiaria;
+   
+
 }

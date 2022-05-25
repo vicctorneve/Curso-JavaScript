@@ -15,6 +15,7 @@ section{
 }
 
 .calculadora{
+   position: relative;
    padding: 20px;
    background-color: gold;
    width: 500px;
@@ -48,6 +49,7 @@ form.calculadora .checkbox{
    margin: 20px 0px;
    align-items: center;
 }
+
 form.calculadora .content .send input{
    background-color: aqua;
    border: 1px solid black;
@@ -55,11 +57,13 @@ form.calculadora .content .send input{
    padding: 5px;
    cursor: pointer;
 }
-.container-resultado{
+#container-resultado{
+   position: absolute;
    height: 140px;
    margin: 20px 0px;
    background-color: rgb(128, 128, 128);
    padding: 10px;
    width: 450px;
    border-radius: 10px;
+   bottom: 10px;
 }
