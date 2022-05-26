@@ -20,6 +20,10 @@ function calcular() {
    result.innerHTML += `<p> Taxa Diaria: R$: ${taxaDiaria} </p>`;
 
    // condição - se o checkbox for checked, faça
+   /*
+      Se dias uteis > 22 faça
+         
+   */
   
    //Orcamento
    result.innerHTML += `<p> Orçamento: R$: ${orcamento} </p>`;
@@ -35,7 +39,4 @@ function calcular() {
    //Fim condição
 
    result.innerHTML += `<p> Valor Total: ${valorTotal} </p>`;
-}
-function reset() {
-   result.innerHTML = 'oi';
 }
