@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="py-BR">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <style>
-      *{
-         margin: 0px;
-      }
-      body{
-         width: 100vw;
-         height: 100vh;
-         overflow: hidden;
-         background-color: gray;
-      }
-      header{
-         background-color: black;
-         color: white;
-         padding: 5px;
-         text-align: center;
-      }
-      main{
-         background-color: white;
-         max-width: 1000px;
-         margin: auto;
-         height: 100vh;
-      }
-   </style>
+   <link rel="stylesheet" href="estilo/style.css">
+   
 </head>
 <body>
-   <header>
-      <h1>Calculator Freelancer</h1>
-   </header>
    <main>
-      <div>
-         <form action=""></form>
-      </div>
+      <form class="calculadora-freelancer" id="calculadora-freelancer">
+         <div class="title">
+            <h1>Calculadora Freelancer</h1>
+            <p>Calculadora para calcular projetos</p>
+         </div>
+         <div class="container-input">
+            <input type="number" required placeholder="Trabalhar quantas horas por dia:" id="horasdia"> <!--Horas trabalhada por dia-->
+            <input type="number" required placeholder="Taxa por hora:" id="taxahora"><!--Quanto vai ganhar por hora-->
+            <div class="check">
+               <input type="checkbox" value="sim" id="check"> 
+               <p>Orçamento fixo</p>
+            </div>
+            <input type="number" required placeholder="Valor do Orçamento:" id="orcamento"> <!--Valor do Orçamento-->
+         </div>
+         <div class="btn">
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Resetar">
+         </div>
+         <div class="result">
+            <h1>Valores:</h1>
+            <p>Valor Diario:</p>
+            <p>Desconto Mensal: 40%</p>
+            <p>Valor Mensal:</p>
+            <p>Dias uteis:</p>
+            <p>Valor total:</p>
+         </div>
+      </form>
+      <script src="js/script.js"></script>
    </main>
 </body>
 </html>
