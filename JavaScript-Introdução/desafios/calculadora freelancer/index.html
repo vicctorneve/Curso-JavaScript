@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="py-BR">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="estilo/style.css">
+   
 </head>
 <body>
-   <section>
-      <form id="calculadora">
-         <h1>Calculadora Freelancer</h1>
-         <div class="container-result" id="container-result">
-            <!--
-               <p>Taxa por hora: R$ 30</p>
-               <p>Taxa Diaria: R$ 320</p>
-               <p>Orçamento: 10.000</p>
-               <p>Dias uteis: 40</p>
-               <p>Desconto: 40%</p>
-               <p>Valor Mensal:</p>
-               <p>Valor total:</p>
-            -->
+   <main>
+      <form class="calculadora-freelancer" id="calculadora-freelancer">
+         <div class="title">
+            <h1>Calculadora Freelancer</h1>
+            <p>Calculadora para calcular projetos</p>
          </div>
-         <div class="container">
-            
-            <div class="container-input">
-               <h2>Taxa por hora:</h2>
-               <input type="number" id="taxahora" placeholder="R$:25" required>
+         <div class="container-input">
+            <input type="number" required placeholder="Trabalhar quantas horas por dia:" id="horasdia"> <!--Horas trabalhada por dia-->
+            <input type="number" required placeholder="Taxa por hora:" id="taxahora"><!--Quanto vai ganhar por hora-->
+            <div class="check">
+               <input type="checkbox" value="sim" id="check"> 
+               <p>Orçamento fixo</p>
             </div>
-            <div class=" container-checkbox">
-               <input type="checkbox" id="check" value="sim">
-               <h2>Orçamento fixo:</h2>
-            </div>
-            <div class="container-input container-orcamento">
-               <h2>Orçamento:</h2>
-               <input type="number" id="orcamento" placeholder="R$:10000" required>
-            </div>
+            <input type="number" required placeholder="Valor do Orçamento:" id="orcamento"> <!--Valor do Orçamento-->
          </div>
          <div class="btn">
-            <input onclick="calcular()" type="button" value="Calcular">
-            <input onclick="reset()" type="button" value="Resetar" id="btn-reset">
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Resetar">
          </div>
-         <script src="js/script.js"></script>
+         <div class="result">
+            <h1>Valores:</h1>
+            <p>Valor Diario:</p>
+            <p>Desconto Mensal: 40%</p>
+            <p>Valor Mensal:</p>
+            <p>Dias uteis:</p>
+            <p>Valor total:</p>
+         </div>
       </form>
-   </section>
+      <script src="js/script.js"></script>
+   </main>
 </body>
 </html>

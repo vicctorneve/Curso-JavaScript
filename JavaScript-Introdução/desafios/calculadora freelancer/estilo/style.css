@@ -1,99 +1,69 @@
 *{
    margin: 0px;
-   box-sizing: border-box;
 }
 body{
-   height: 100vh;
    width: 100vw;
-   background-color: antiquewhite;
-}
-section{
    height: 100vh;
+   overflow: hidden;
+   background: white url(../background.jpg) center fixed;
+   background-size: cover;
+   backdrop-filter: blur(3px);
+}
+main{
    display: flex;
    align-items: center;
    justify-content: center;
+   height: 100vh;
 }
-form#calculadora{
-   display: flex;
-   flex-direction: column;
-   position: relative;
-   background-color: gray;
-   width: 400px;
-   height: 700px;
-   border-radius: 20px;
-   border: 5px solid black;
-}
-form#calculadora h1{
+form.calculadora-freelancer{
+   box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.342);
    border: 1px solid black;
-   text-align: center;
-   align-self: center;
-   margin: 10px 0px;
-   width: 350px;
    background-color: white;
-   padding: 5px;
+   width: 500px;
+   height: 650px;
    border-radius: 10px;
 }
-form#calculadora .container-result{
-   padding: 10px;
-   align-self: center;
+form.calculadora-freelancer .title{
+   text-align: center;
    margin: 20px;
-   border-radius: 10px;
-   background-color: rgba(127, 255, 212, 0.527);
-   width: 350px;
-   height: 220px;
-   border: 1px solid black;
 }
-form#calculadora .container-result p{
-   font-size: 1.5em;
-}
-
-form#calculadora .container{
-   position: absolute;
+.container-input{
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   bottom: 70px;
-   border-radius: 10px;
-   align-self: center;
-   width: 350px;
-   height: 300px;
-   border: 1px solid black;
-   background-color: orange;
+   padding: 20px;
+   margin: 10px auto;
+
 }
-form#calculadora .container .container-input{
-   margin: 20px;
+.container-input input{
+   margin: 20px 0px;
+   padding: 5px;
 }
-form#calculadora .container .container-checkbox{
+.container-input .check{
    display: flex;
-   margin: 20px;
    align-items: center;
+   gap: 5px;
 }
-form#calculadora .container .container-checkbox h2{
-   margin: 0px 10px;
-}
-form#calculadora .container-input input{
-   margin: 10px 0px;
-   width: 300px;
-}
-form#calculadora .container-orcamento{
-   
-}
-form#calculadora  .btn{
-   position: absolute;
-   bottom: 20px;
+.calculadora-freelancer .btn{
    display: flex;
-   align-self: center;
+   justify-content: center;
    gap: 10px;
 }
-form#calculadora .btn input{
-   cursor: pointer;
-   background-color: orange;
+.calculadora-freelancer .btn input{
+   background-color: aqua;
    border: 1px solid black;
-   border-radius: 5px;
+   padding: 5px;
    width: 150px;
-   font-size: 1.3em;
-   transition: all 300ms ease;
+   font-weight: bold;
+   color: black;
 }
-form#calculadora .btn input:hover{
-   -webkit-transform: scale(0.9);
+.calculadora-freelancer .result{
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(216, 216, 216);
+   margin: 20px 0px;
+   padding: 10px;
+}
+.calculadora-freelancer .result h1{
+   text-align: center;
+   color: rgb(0, 140, 255);
 }
