@@ -16,6 +16,7 @@ main{
    height: 100vh;
 }
 form.calculadora-freelancer{
+   position: relative;
    box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.342);
    border: 1px solid black;
    background-color: white;
@@ -43,6 +44,9 @@ form.calculadora-freelancer .title{
    align-items: center;
    gap: 5px;
 }
+.container-input #orcamento{
+   display: block;
+}
 .calculadora-freelancer .btn{
    display: flex;
    justify-content: center;
@@ -58,6 +62,7 @@ form.calculadora-freelancer .title{
 }
 .calculadora-freelancer .result{
    display: flex;
+   bottom: 40px;
    flex-direction: column;
    background-color: rgb(216, 216, 216);
    margin: 20px 0px;
@@ -66,4 +71,8 @@ form.calculadora-freelancer .title{
 .calculadora-freelancer .result h1{
    text-align: center;
    color: rgb(0, 140, 255);
+}
+.calculadora-freelancer .result p{
+   font-size: 1.3em;
+   font-weight: bold;
 }
