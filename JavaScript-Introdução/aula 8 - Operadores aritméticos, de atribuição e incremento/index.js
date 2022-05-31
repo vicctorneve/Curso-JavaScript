@@ -1,7 +1,7 @@
 /** NaN = Not a number
  * Aritméticos
- * [+ Adição] 
- * [/ Concatenação (Strings)]
+ * [+ Adição] Concatenação (Strings)
+ * [ / ]
  * [- menos] 
  * [/ divisão]
  * [* multiplicação]

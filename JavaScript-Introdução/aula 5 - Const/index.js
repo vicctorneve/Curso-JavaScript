@@ -7,7 +7,8 @@
    * Não podemos modificar o valor: de uma constante 
    * NÃO UTILIZE VAR, UTILEZE CONST
 */
-//String = "TEXT" - Number = Número
+//String = "TEXT"
+// Number = Número
 
 const anoAtual = 2022;
 const anoDeNascimento = 2003;

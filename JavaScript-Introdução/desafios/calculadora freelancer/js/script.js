@@ -5,9 +5,15 @@ let taxaHora = document.querySelector('#taxahora');
 let checkbox = document.querySelector('#check');
 let result = document.querySelector('#result')
 let orcamento = document.querySelector('#orcamento');
-let taxaDia = horaDia.value * taxaHora.value;
+
 
 function send(){
+   horaDia = horaDia.value
+   taxaHora = taxaHora.value
+
+   let taxaDia = horaDia * taxaHora;
+
+   let valorMensal 
    result.innerHTML = taxaDia;
-   result.innerHTML = 
+   
 }
