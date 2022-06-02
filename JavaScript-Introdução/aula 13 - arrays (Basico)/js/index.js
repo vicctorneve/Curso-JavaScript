@@ -43,24 +43,27 @@ const alunos = ['gabriel', 'joao', 'vicctor'];
    //delete alunos[1]; = apagar o elemento e deixa o espaço vazio (não altera o index)
 */
 
-/*
-alunos.push('Luiza');
-alunos.push('Eduardo');
-// Fatiar o array do indice (N) até (N)
-console.log(alunos.slice(0, -1)) // tamanho do array -1
-*/
+// Fatiar o array 
+
+console.log(alunos.slice(0, 2)) 
 
 /*
 Adicionar e remover elementos em qualquer posição do array
+
    console.log(alunos)
+   [ 'gabriel', 'joao', 'vicctor' ]
+
    alunos.splice(2,0, 'luiza', 'paulo'); // Adiciona elemento apartir do indice 2 e remover 0
+
    console.log(alunos);
+   [ 'gabriel', 'joao', 'luiza', 'paulo', 'vicctor' ]
+
    alunos.splice(2,2); // remover 2 elementos apatir do indice 2
+   0
    console.log(alunos);
+   [ 'gabriel', 'joao', 'vicctor' ]
 
    Resultado
 
-   [ 'gabriel', 'joao', 'vicctor' ]
-   [ 'gabriel', 'joao', 'luiza', 'paulo', 'vicctor' ]
-   [ 'gabriel', 'joao', 'vicctor' ]
+   
 */

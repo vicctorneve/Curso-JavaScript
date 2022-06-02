@@ -52,7 +52,7 @@ form.calculadora-freelancer .title{
    justify-content: center;
    gap: 10px;
 }
-.calculadora-freelancer .btn input{
+.calculadora-freelancer button{
    background-color: aqua;
    border: 1px solid black;
    padding: 5px;

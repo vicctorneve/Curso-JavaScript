@@ -1,7 +1,7 @@
 //               01234567
 let umaString = "um textoe"
 
-
+console.log(umaString.length)
 console.log(umaString[4]); //  Mostra a o valor no indice 4 = e
 console.log(umaString.charAt(5)); //Mostra a o valor no indice 5 = x
 console.log(umaString.indexOf('e')); // Mostra o primeiro indice do valor da esquerda pra direita da letra 'e' = 4
