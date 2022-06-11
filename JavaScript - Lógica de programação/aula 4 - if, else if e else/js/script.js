@@ -30,3 +30,9 @@ if (imc < 18.5){
 }
 
 // só sera executado a primeira condição verdadeira do bloco if
+
+const num = 10;
+
+if (num >=0 && num<=4) {
+   
+}
