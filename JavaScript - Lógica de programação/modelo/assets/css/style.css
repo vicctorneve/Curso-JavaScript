@@ -75,3 +75,14 @@ form button:hover{
 p.result{
    padding: 5px;
 }
+
+/* CSS JS */
+
+.color-invalido, .color-valido{
+   color: white;
+   background-color: rgb(235, 64, 64);
+   padding: 10px 20px;
+}
+.color-valido{
+   background-color: rgb(14, 226, 14);
+}
