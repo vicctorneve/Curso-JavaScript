@@ -7,7 +7,8 @@
 
 const data = new Date('2003-12-17');
 const diaSemana = data.getDay();
-
+const diaSemanaTexto =  getDayText(diaSemana);
+0,
 function getDayText (diaSemana) {
    let diaSemanaTexto;
 
@@ -38,7 +39,6 @@ function getDayText (diaSemana) {
    }
 }
 
-const diaSemanaTexto =  getDayText(diaSemana);
 
 console.log(diaSemana, diaSemanaTexto);
 
