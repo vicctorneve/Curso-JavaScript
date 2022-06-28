@@ -24,11 +24,8 @@ const jogoDaVelha = [
 ];
 const [linha1, linha2, linha3] = jogoDaVelha;
 
-linha1[1] = 'x';
-
 console.log(linha1);
 console.log(linha2);
 console.log(linha3);
-
 
 
