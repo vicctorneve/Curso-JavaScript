@@ -1,0 +1,35 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: gray;
+   justify-content: center; 
+   color: white;  
+}
+
+h1{
+   background-color: green;
+   border-radius: 10px;
+}
+.container-tabuada{
+   width: 500px;
+   background-color: black;
+   border-radius: 10px;
+   height: 90vh;
+   text-align: center;
+   font-size: 2em;
+   padding: 20px;
+}
+#tabuada{
+   background-color: green;
+   padding: 10px;
+   border-radius: 10px;
+   margin: 60px 0;
+}

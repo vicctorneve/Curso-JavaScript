@@ -14,13 +14,13 @@ console.log(nome);
 */
 
 // Atribuição via desestruturação:
-const { nome: nick = '', sobrenome, idade } = pessoa;
+const { 
+   nome: nick = '',
+   sobrenome,
+   idade 
+} = pessoa;
+
 console.log(nick, sobrenome);
 
-const { endereco: {
-      pais,
-      estado 
-   }, 
-endereco 
-} = pessoa;
+const { endereco: { pais, estado }, endereco } = pessoa;
 console.log(pais,estado, endereco);

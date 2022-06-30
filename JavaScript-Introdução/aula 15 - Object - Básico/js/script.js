@@ -1,12 +1,8 @@
 /* Criar array utiliza-se [] colchete */
    const pessoa1 = []
-
-
 /* Criar objeto utilza-se {} chaves*/
    const pessoa01 = {};
-
-/* Fuction que cria objetos */
-
+// Fuction que cria objetos 
 /*
    function criaAluno (nome, sobrenome, nota){
       return{nome,sobrenome,nota};
