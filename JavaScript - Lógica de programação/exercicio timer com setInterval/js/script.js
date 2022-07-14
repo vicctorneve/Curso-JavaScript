@@ -38,6 +38,7 @@ function showTime() {
 btnStart.addEventListener('click', startTimer)
 function startTimer() {
    cronometro.style.color = '#000000';
+   clearInterval(timer);
     timer = setInterval(function () {
       segundos++
       cronometro.innerHTML = showTime()

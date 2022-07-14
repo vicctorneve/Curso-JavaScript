@@ -5,6 +5,9 @@ const btnReset = document.querySelector('#btn-reset');
 let timer;
 let segundos = 0;
 
+function addColorBlack () {
+   cronometro.style.color = '#000000';
+}
 function createTimer(segundos) {
    const data = new Date(segundos*1000)
    return data.toLocaleTimeString('pt-BR', {
@@ -14,23 +17,23 @@ function createTimer(segundos) {
 }
 btnStart.addEventListener('click', startTimer)
 function startTimer() {
-    timer = setInterval(function () {
-      cronometro.innerHTML=createTimer(segundos)
+   clearInterval(timer);
+   timer = setInterval(function () {
       segundos++
+      cronometro.innerHTML=createTimer(segundos)
    }, 1000)
-   cronometro.style.color = '#000000';
-   
+   addColorBlack()
 }
 btnStop.addEventListener('click', stopTimer)
 function stopTimer() {
-   cronometro.style.color = '#ff0000';
    clearInterval(timer);
+   cronometro.style.color = '#ff0000';
 }
 
 btnReset.addEventListener('click', resetTimer)
 function resetTimer() {
-   cronometro.style.color = '#000000';
+   addColorBlack()
    segundos = 0;
-   cronometro.innerHTML=createTimer(segundos)
+   cronometro.innerHTML='00:00:00'
    clearInterval(timer)
 }
