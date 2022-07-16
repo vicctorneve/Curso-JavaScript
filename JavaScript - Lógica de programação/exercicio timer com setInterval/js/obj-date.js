@@ -4,7 +4,6 @@ const btnStop = document.querySelector('#btn-stop');
 const btnReset = document.querySelector('#btn-reset');
 let timer;
 let segundos = 0;
-
 function addColorBlack () {
    cronometro.style.color = '#000000';
 }
@@ -15,7 +14,18 @@ function createTimer(segundos) {
       timeZone: 'GMT'
    })
 }
-btnStart.addEventListener('click', startTimer)
+document.addEventListener('click', function(e) { 
+   const el = e.target;
+   if (el.classList.contains('start')) {
+      startTimer()
+   }
+   if (el.classList.contains('stop')) {
+      stopTimer()
+   }
+   if (el.classList.contains('reset')) {
+      resetTimer()
+   }
+}) 
 function startTimer() {
    clearInterval(timer);
    timer = setInterval(function () {
@@ -24,13 +34,11 @@ function startTimer() {
    }, 1000)
    addColorBlack()
 }
-btnStop.addEventListener('click', stopTimer)
 function stopTimer() {
    clearInterval(timer);
    cronometro.style.color = '#ff0000';
 }
 
-btnReset.addEventListener('click', resetTimer)
 function resetTimer() {
    addColorBlack()
    segundos = 0;
