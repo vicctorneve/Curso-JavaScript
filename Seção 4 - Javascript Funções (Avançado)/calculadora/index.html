@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Calculadora</title>
+</head>
+<body>
+   <div class="calculadora">
+      <div class="display">
+         <p class="calc"></p>
+         <p class="result">= 0</p>
+      </div>
+      <div class="buttons">
+         <button class="delete-all">AC</button>
+         <button class="delete">delete</button>
+         <button class="operation" onclick="showElement('%')">%</button>
+         <button class="operation" onclick="showElement('/')">/</button>
+         <button class="number" onclick="showElement(7)">7</button>
+         <button class="number" onclick="showElement(8)">8</button>
+         <button class="number" onclick="showElement(9)">9</button>
+         <button class="operation" onclick="showElement('*')">X</button>
+         <button class="number" onclick="showElement(4)">4</button>
+         <button class="number" onclick="showElement(5)">5</button>
+         <button class="number" onclick="showElement(6)">6</button>
+         <button class="operation" onclick="showElement('-')">-</button>
+         <button class="number" onclick="showElement(1)">1</button>
+         <button class="number" onclick="showElement(2)">2</button>
+         <button class="number" onclick="showElement(3)">3</button>
+         <button class="operation" onclick="showElement('+')">+</button>
+         <button class=""></button>
+         <button class="number" onclick="showElement(0)">0</button>
+         <button class="number" onclick="showElement('.')">,</button>
+         <button class="igual" onclick="showElement('=')"><p>=</p></button>
+      </div>
+   </div>
+   <script src="js/script.js"></script>
+</body>
+</html>
