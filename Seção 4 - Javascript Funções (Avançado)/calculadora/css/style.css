@@ -14,19 +14,34 @@ body{
 }
 .calculadora{
    width: 320px;
-   height: 502px;
    overflow: hidden;
    background-color: white;
 }
 .calculadora .display{
-   font-size: 30px;
    display: flex;
    flex-direction: column;
    align-items: flex-end;
    justify-content: flex-end;
-   height: 100px;
+   height: 150px;
    padding: 20px;
    background-color: white;
+}
+.calculadora .display .historic{
+   scrollbar-width: thin;
+   scrollbar-color: blue orange;
+   overflow-y: auto;
+   text-align: end;
+   font-size: 1em;
+}
+.calculadora .display .historic::-webkit-scrollbar{
+   width: 6px;
+}
+.calculadora .display .historic::-webkit-scrollbar-track{
+   background-color: #B8B8B8;
+}
+.calculadora .display .historic::-webkit-scrollbar-thumb{
+   background-color: orange;
+   border-radius: 10px;
 }
 .calculadora .buttons{
    border-top: 2px solid rgba(44, 44, 44, 0.37);
@@ -44,8 +59,8 @@ body{
    background-color: rgba(128, 128, 128, 0.562);
 }
 .buttons button.operation,
-.buttons button.delete,
-.buttons button.delete-all{
+.buttons button.del,
+.buttons button.clear{
    color: orangered;
 }
 .buttons button.igual p{
