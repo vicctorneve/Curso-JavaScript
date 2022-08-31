@@ -19,7 +19,7 @@ Conta.prototype.depositar = function(valor) {
 }
 
 Conta.prototype.verSaldo = function() {
-   console.log(`Ag/c : ${this.agencia}/${this.conta} - Saldo: R$${this.saldo.toFixed(2)} `)
+   console.log(`Ag/c : ${this.agencia}/${this.conta} - Saldo: R$${this.saldo.toFixed(2)}`)
 };
 
 function ContaCorrente(agencia, conta, saldo, limite){
