@@ -1,4 +1,4 @@
-const _velocidade = Symbol('velocidade'); // Propriedade privada
+const _velocidade = Symbol(); // Propriedade privada
 class Carro {
    constructor(nome){
       this.nome = nome;
@@ -29,5 +29,5 @@ class Carro {
 const c1 = new Carro('Fusca')
 
 
-c1.velocidade = 100
-console.log(c1.velocidade)
+c1.velocidade = 1000
+console.log(c1)
