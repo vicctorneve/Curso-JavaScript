@@ -1,0 +1,71 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   color: black;
+   background-color: white;
+   height: 100vh;
+   width: 100vw;
+}
+
+header{
+   background-color: #165780;
+   color: white;
+}
+header .menu-content{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 10vh;
+   padding: 10px;
+   max-width: 1500px;
+   margin: auto;
+}
+main{
+   margin: auto;
+   max-width: 1500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 90vh;
+   justify-content: center;
+}
+.container-cpf{
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.container-cpf .box-cpf{
+   display: flex;
+   align-items: center;
+}
+.container-cpf input{
+   text-align: center;
+   width: 80vw;
+   padding: 15px;
+   margin: 10px 0
+}
+.container-cpf button{
+   border-radius: 5px;
+   font-weight: bold;
+   color: white;
+   border: none;
+   cursor: pointer;
+   position: absolute;
+   right: 10px;
+   padding: 10px;
+   background-color: #165780;
+}
+#result-cpf{
+   margin: 10px;
+   font-size: 1.5em;
+}
+.cpf-valid{
+   color: green;
+}
+.cpf-invalid{
+   color: red;
+}

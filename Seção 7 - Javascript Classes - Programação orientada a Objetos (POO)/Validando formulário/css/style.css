@@ -1,0 +1,43 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background-color: cadetblue;
+   display: flex;
+   justify-content: center;
+   width: 100vw;
+   height: 100vh;
+   align-items: center;
+}
+form{
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: white;
+}
+form h1{
+   text-align: center;
+   margin: 10px 0
+}
+form input{
+
+   margin: 10px 0;
+   padding: 5px;
+}
+form button{
+   cursor: pointer;
+   margin: 10px 0;
+   padding: 10px;
+}
+
+form p.name::after{
+   content: '1';
+}
+.invalid{
+   color: red;
+   border-color: red;
+}
