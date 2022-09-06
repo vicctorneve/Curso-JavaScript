@@ -29,24 +29,23 @@ class Valid{
          value: this.cpf.replace(/\D+/g, '')
       })
    };
-
    validaUsuario(){
       isValidOrInvalid(inputUsuario, 3, 12)
-      return this.usuario.length >= 3 || this.usuario.length <= 12
+      return this.usuario.length >= 3 && this.usuario.length <= 12
    };
    
    validaSenha(){
       isValidOrInvalid(inputPassword, 6, 12)
-      return this.password.length >= 6 || this.password.length <= 12
+      return this.password.length >= 6 && this.password.length <= 12
    };
    
    validConfirmSenha(){
-      if(this.confirmPassword === this.password){
+      if(this.confirmPassword === this.password && this.confirmPassword !== ' '){
          inputConfirmePassword.classList.remove('invalid')
       }else{
          inputConfirmePassword.classList.add('invalid')
       }
-      return this.confirmPassword !== this.password
+      return this.confirmPassword === this.password && this.confirmPassword !== ''
    };
 
    validCPF(){
@@ -76,7 +75,7 @@ class Valid{
 };
 
 function isValidOrInvalid(input, minCarac, maxCarac){
-   if(input.value.length < minCarac || input.value.length > maxCarac){
+   if(input.value.length >= minCarac && input.value.length <= maxCarac){
       input.classList.remove('invalid');
    }else{
       input.classList.add('invalid');
@@ -91,16 +90,13 @@ btnRegister.addEventListener('click', function(){
    //    }
    // }
    const formulario = new Valid(inputUsuario, inputPassword, inputConfirmePassword, inputCPF)
-   formulario.validaUsuario()
-   formulario.validaSenha()
    if(formulario.validCPF()){
       inputCPF.classList.remove('invalid')
    }else{
       inputCPF.classList.add('invalid')
    }
-   console.log(formulario.validaUsuario(),
-               formulario.validaSenha(), formulario.validConfirmSenha(), formulario.validCPF())
 
-   if(formulario.validaUsuario() || formulario.validaSenha() || formulario.validConfirmSenha() || formulario.validCPF()) return false
+   if(formulario.validaUsuario() && formulario.validaSenha() && formulario.validConfirmSenha() && formulario.validCPF()) 
    alert('Conta Registrada com sucesso')
 })
+// 081.917.415-71
