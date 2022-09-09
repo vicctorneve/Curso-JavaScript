@@ -10,20 +10,33 @@
 <body>
    <form id="form">
       <h1>Registrar</h1>
-      <p class="name">Nome:</p>
+      <label for="input-name" class="name">Nome:
+         <span class="msg-erro"></span>
+      </label>
       <input type="text" id="input-name">
-      <p class="last-name">Sobrenome:</p>
+      <label for="input-last-name" class="last-name">Sobrenome:
+         <span class="msg-erro" ></span>
+      </label>
       <input type="text" id="input-last-name">
-      <p class="cpf">CPF:</p>
+      <label for="input-cpf" class="cpf"> CPF: 
+         <span class="msg-erro "></span>
+      </label>
       <input type="text" id="input-cpf">
-      <p class="usuario">Usuário</p>
+      <label for="input-usuario" class="usuario">Usuário:
+         <span class="msg-erro "></span>
+      </label>
       <input type="text" id="input-usuario">
-      <p class="password">Senha:</p>
+      <label for="input-password" class="password">Senha: 
+         <span class="msg-erro "></span>
+      </label>
       <input type="password" id="input-password">
-      <p class="confirme-password">Confirmar senha:</p>
+      <label for="input-confirme-password" class="confirme-password">Confirmar senha: 
+         <span class="msg-erro "></span>
+      </label>
       <input type="password" id="input-confirme-password">
-      <button type="submit" id="button-registrar">Registrar</button>
+      <button type="submit" id="button-registrar">Registrar </button>
    </form>
 </body>
 <script src="js/script.js"></script>
 </html>
+

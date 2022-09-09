@@ -1,4 +1,7 @@
 function Conta(agencia, conta, saldo){
+   if(this.contructor == Conta){
+      throw new Error('Abstract classes cannot be instacied')
+   }
    this.agencia = agencia;
    this.conta = conta;
    this.saldo = saldo;
@@ -21,6 +24,7 @@ Conta.prototype.depositar = function(valor) {
 Conta.prototype.verSaldo = function() {
    console.log(`Ag/c : ${this.agencia}/${this.conta} - Saldo: R$${this.saldo.toFixed(2)}`)
 };
+
 
 function ContaCorrente(agencia, conta, saldo, limite){
    Conta.call(this, agencia, conta, saldo);

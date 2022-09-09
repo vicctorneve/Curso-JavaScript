@@ -4,6 +4,7 @@
 // Senha precisa ter entre 6 e 12 caracteres
 
 const form = document.querySelector('#form')
+const msgError = form.querySelectorAll('.msg-erro')
 const inputs = form.querySelectorAll('form input')
 const inputName = form.querySelector('#input-name');
 const inputLastName = form.querySelector('#input-last-name');
@@ -13,9 +14,7 @@ const inputPassword = form.querySelector('#input-password');
 const inputConfirmePassword = form.querySelector('#input-confirme-password');
 const btnRegister = form.querySelector('#button-registrar')
 
-form.addEventListener('submit', function(e){
-   e.preventDefault()
-})
+form.addEventListener('submit', e => e.preventDefault());
 
 class Valid{
    constructor(usuario, password, confirmPassword, cpf){
@@ -28,21 +27,40 @@ class Valid{
          enumerable: true,
          value: this.cpf.replace(/\D+/g, '')
       })
+      this.validaSenha();
    };
    validaUsuario(){
-      isValidOrInvalid(inputUsuario, 3, 12)
-      return this.usuario.length >= 3 && this.usuario.length <= 12
+      if(this.usuario.length >= 3 && this.usuario.length <= 12 || !this.usuario.match(/^[a-zA-Z0-9]+$/g)){
+         inputUsuario.classList.remove('invalid');
+         msgError[3].innerHTML = ''
+      } else{
+         inputUsuario.classList.add('invalid');
+         msgError[3].innerHTML = 'Usuário precisa conter entre 3 a 12 caractere.'
+      }
+      if(!this.usuario.match(/^[a-zA-Z0-9]+$/g)){
+         inputUsuario.classList.add('invalid')
+         msgError[3].innerHTML = 'Usuário precisa conter apenas letras e/ou números.'
+      }
+      return this.usuario.length >= 3 && this.usuario.length <= 12 && !this.usuario.match(/^[a-zA-Z0-9]+$/g);
    };
    
    validaSenha(){
-      isValidOrInvalid(inputPassword, 6, 12)
+      if(this.password.length >= 6 && this.password.length <= 12){
+         inputPassword.classList.remove('invalid');
+         msgError[4].innerHTML = ''
+      } else{
+         msgError[4].innerHTML = 'Senha precisa conter entre 6 a 12 caractere.'
+         inputPassword.classList.add('invalid');
+      }
       return this.password.length >= 6 && this.password.length <= 12
    };
    
    validConfirmSenha(){
       if(this.confirmPassword === this.password && this.confirmPassword !== ' '){
          inputConfirmePassword.classList.remove('invalid')
+         msgError[5].innerHTML = ''
       }else{
+         msgError[5].innerHTML = 'campos senha e confirme senha precisam ser iguais.'
          inputConfirmePassword.classList.add('invalid')
       }
       return this.confirmPassword === this.password && this.confirmPassword !== ''
@@ -74,29 +92,25 @@ class Valid{
 
 };
 
-function isValidOrInvalid(input, minCarac, maxCarac){
-   if(input.value.length >= minCarac && input.value.length <= maxCarac){
-      input.classList.remove('invalid');
-   }else{
-      input.classList.add('invalid');
-   }
-}
-
 btnRegister.addEventListener('click', function(){
-   // for (let input of inputs){
-   //    if(input.value === ''){
-   //       alert('Preencha todos os campos')
-   //       return
-   //    }
-   // }
+   for (let input of inputs){
+      if(!input.value){
+         alert('Preencha todos os campos')
+         return
+      }
+   }
    const formulario = new Valid(inputUsuario, inputPassword, inputConfirmePassword, inputCPF)
+
+   formulario.validConfirmSenha();
+
    if(formulario.validCPF()){
       inputCPF.classList.remove('invalid')
+      msgError[2].innerHTML = ''
    }else{
+      msgError[2].innerHTML = 'CPF inválido.'
       inputCPF.classList.add('invalid')
    }
 
    if(formulario.validaUsuario() && formulario.validaSenha() && formulario.validConfirmSenha() && formulario.validCPF()) 
    alert('Conta Registrada com sucesso')
 })
-// 081.917.415-71

@@ -34,8 +34,9 @@ form button{
    padding: 10px;
 }
 
-form p.name::after{
-   content: '1';
+.msg-erro{
+   color: red;
+   font-size: 12px;
 }
 .invalid{
    color: red;

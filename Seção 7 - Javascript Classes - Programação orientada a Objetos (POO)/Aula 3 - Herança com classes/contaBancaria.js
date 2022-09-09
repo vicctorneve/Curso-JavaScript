@@ -1,7 +1,10 @@
 class ContaBancaria {
    constructor(nome){
+      if(this.constructor === ContaBancaria){
+         throw new Error('Abstract classes cannot be instacied')
+      }
       this.nome = nome;
-      this.saldo = 0
+      this.saldo = 0;
    }
 
    sacar(valor){
@@ -25,13 +28,17 @@ class ContaBancaria {
    }
 }
 
+const conta1 = new ContaBancaria()
+console.log(conta1)
+
+
 class ContaCorrente extends ContaBancaria{
    constructor(nome, limite){
       super(nome);
-      this.limite = 100
+      this.limite = 100;
    }
-
-   sacar(valor){
+   
+   sacar(valor) {
       if(typeof valor !== 'number') return;
       if(valor > this.saldo + this.limite) {
          console.log('Saldo insuficiente')
@@ -42,6 +49,8 @@ class ContaCorrente extends ContaBancaria{
       this.verSaldo()
    }
 }
+
+const conta2 = new ContaCorrente()
 
 class ContaPoupanca extends ContaBancaria{
    constructor(nome){
