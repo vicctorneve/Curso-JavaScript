@@ -30,7 +30,7 @@ class Valid{
       this.validaSenha();
    };
    validaUsuario(){
-      if(this.usuario.length >= 3 && this.usuario.length <= 12 || !this.usuario.match(/^[a-zA-Z0-9]+$/g)){
+      if(this.usuario.length >= 3 && this.usuario.length <= 12){
          inputUsuario.classList.remove('invalid');
          msgError[3].innerHTML = ''
       } else{
@@ -41,7 +41,7 @@ class Valid{
          inputUsuario.classList.add('invalid')
          msgError[3].innerHTML = 'Usuário precisa conter apenas letras e/ou números.'
       }
-      return this.usuario.length >= 3 && this.usuario.length <= 12 && !this.usuario.match(/^[a-zA-Z0-9]+$/g);
+      return this.usuario.length >= 3 && this.usuario.length <= 12;
    };
    
    validaSenha(){
