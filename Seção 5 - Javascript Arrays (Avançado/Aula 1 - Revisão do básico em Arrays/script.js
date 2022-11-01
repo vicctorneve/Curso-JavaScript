@@ -5,6 +5,7 @@ const novo = [...nomes]
 
 nomes[2] = 'lucas'; // Alterar o elemento do indice 2 para 'lucas'
 console.log(nomes)
+
 console.log(novo)
 
 console.log('Tamanho do array é:',nomes.length) // Tamanho do array
