@@ -24,5 +24,4 @@ function carregaDadosHtml(json){
       }
       table.appendChild(tr);
    });
-   
 }
