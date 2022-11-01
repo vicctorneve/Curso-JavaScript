@@ -114,3 +114,4 @@ btnRegister.addEventListener('click', function(){
    if(formulario.validaUsuario() && formulario.validaSenha() && formulario.validConfirmSenha() && formulario.validCPF()) 
    alert('Conta Registrada com sucesso')
 })
+
