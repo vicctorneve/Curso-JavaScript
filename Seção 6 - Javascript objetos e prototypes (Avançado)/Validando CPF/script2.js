@@ -50,3 +50,4 @@ btnValidCpf.addEventListener('click', function(){
 
 
 
+
