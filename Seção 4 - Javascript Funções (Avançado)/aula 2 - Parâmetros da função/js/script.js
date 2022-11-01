@@ -35,5 +35,6 @@ function calculadora(operador, resultado, ...numeros){
       if (operador === '/') resultado /= numero;
    }
    console.log(resultado)
+   
 }
 calculadora('+', 0, 10,20,50,10)
