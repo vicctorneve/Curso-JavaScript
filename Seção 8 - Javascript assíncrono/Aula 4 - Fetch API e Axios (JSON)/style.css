@@ -1,0 +1,17 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+table{
+   margin: auto;
+   
+}
+td,tr,th{
+   
+   padding: 5px;
+}
+th{
+   background-color: cadetblue;
+   color: white;
+}

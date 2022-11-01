@@ -6,7 +6,6 @@ class ContaBancaria {
       this.nome = nome;
       this.saldo = 0;
    }
-
    sacar(valor){
       if(typeof valor !== 'number') return;
       if(valor > this.saldo) {
@@ -17,7 +16,6 @@ class ContaBancaria {
       this.saldo -= valor
       this.verSaldo()
    }
-   
    depositar(valor){
       this.saldo += valor;
       this.verSaldo()
@@ -33,7 +31,7 @@ console.log(conta1)
 
 
 class ContaCorrente extends ContaBancaria{
-   constructor(nome, limite){
+   constructor(nome){
       super(nome);
       this.limite = 100;
    }
