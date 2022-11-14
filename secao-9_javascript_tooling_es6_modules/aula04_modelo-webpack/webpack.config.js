@@ -1,5 +1,5 @@
 const path = require('path'); // CommonJS
- 
+
 module.exports = {
   mode: 'production',
   entry: './src/main.js',
@@ -24,4 +24,3 @@ module.exports = {
   },
   devtool: 'source-map'
 };
- 
