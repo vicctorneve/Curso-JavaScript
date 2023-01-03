@@ -1,0 +1,10 @@
+// npm init -y // iniciar
+// npm i // instalar
+// npm uninstall // desinstalar
+// npm i express --save-dev - devDependecie
+// npm i express --save-prod - dependecie
+// npm i express@version
+// npm i express@latest
+// npm ls
+// npm outdated - pacotes desatualizados
+// npm update - atualizar
