@@ -9,6 +9,7 @@ route.post('/', homeController.trataPost);
 
 // Rotas de contatos
 
+
 route.get('/contato', contatoController.paginaInicial)
 
 module.exports = route;
