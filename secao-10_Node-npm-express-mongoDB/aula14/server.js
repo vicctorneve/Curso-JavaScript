@@ -8,7 +8,6 @@ moongose.set("strictQuery", true)
 
 moongose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
    .then(() => {
-      console.log('conectei a base de dados');
       app.emit('pronto')
    })
    .catch(err => console.log(err))
