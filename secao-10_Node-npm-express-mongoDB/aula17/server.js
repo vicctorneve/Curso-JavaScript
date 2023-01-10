@@ -33,7 +33,6 @@ const sessionOptions = session({
       httpOnly: true
    },
 })
-
 app.use(sessionOptions);
 app.use(flash());
 
