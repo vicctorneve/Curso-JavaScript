@@ -6,9 +6,10 @@ exports.outroMiddlaware = (req,res, next) => {
    next();
 }
 exports.checkCsrfError = (err,req,res, next) => {
-   if(err && err.code === "EBADCSRFTOKEN"){
+   if(err ){
       return res.render('404')
    }
+   next()
 }
 exports.csrfMiddlaware = (req,res, next) => {
    res.locals.csrfToken = req.csrfToken()
