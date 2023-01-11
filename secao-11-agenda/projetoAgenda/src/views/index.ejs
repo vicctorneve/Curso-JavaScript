@@ -11,9 +11,9 @@
 
       <%- include('includes/messages') %> 
 
-      <div class="resposive-table">
-        <table class="table my-3">
-          <tbody>
+      <% if(contatos.length > 0) {%> 
+        <div class="resposive-table">
+          <table class="table my-3">
             <thead>
               <tr>
                 <th>Nome</th>
@@ -22,15 +22,23 @@
                 <th>Email</th>
               </tr>
             </thead>
-            <tr>
-              <td>Vicctor</td>
-              <td>Neves</td>
-              <td>Telefone</td>
-              <td>Email</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <tbody>
+              <% contatos.forEach(contato => { %>
+                <tr>
+                  <td><%= contato.nome %></td>
+                  <td><%= contato.sobrenome %></td>
+                  <td><%= contato.telefone %></td>
+                  <td><%= contato.email %></td>
+                  <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+                  <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+        </div>
+      <% } else{ %>
+        <p class="text-center lead">Não existem contatos na sua agenda</p>
+      <% } %> 
 
     </div>
 
