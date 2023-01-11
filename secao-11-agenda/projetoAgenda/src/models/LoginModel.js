@@ -54,7 +54,7 @@ class Login {
    }
 
    valida(){
-      this.clearUp()
+      this.cleanUp()
       //O e-mail precisa ser válido
       if(!validator.isEmail(this.body.email)) {
          this.errors.push('E-mail inválido')
@@ -65,7 +65,7 @@ class Login {
       }
    }
 
-   clearUp(){
+   cleanUp(){
       for( const key in this.body){
          if(typeof this.body[key] !== 'string'){
             this.body[key] = ''
