@@ -20,9 +20,14 @@ function Contato(body){
 
 Contato.prototype.register = async function(){
    this.valida()
+   
+   if(this.errors.length > 0) return;
+   
+   await this.userExists()
    if(this.errors.length > 0) return;
    this.contato = await ContatoModel.create(this.body)
 }
+
 
 Contato.prototype.valida = function() {
    this.cleanUp();
@@ -30,7 +35,9 @@ Contato.prototype.valida = function() {
    //O e-mail precisa ser válido
    if(this.body.email && !validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
 
-   if(!this.body.nome) this.errors.push('Nome é um campo obrigatório')
+   if(!this.body.nome) {
+      this.errors.push('Nome é um campo obrigatório')
+   }
 
    if(!this.body.email && !this.body.telefone) {
       this.errors.push('É necessário adicionar pelo menos o telefone ou o email')
@@ -56,7 +63,29 @@ Contato.prototype.edit = async function(id){
    if(typeof id !== 'string') return
    this.valida();
    if(this.errors.length > 0) return
+
+   await this.userExists()
+   if(this.errors.length > 0) return;
+   
    this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, {new: true});
+}
+
+Contato.prototype.userExists = async function(){
+   
+   const contatos = await ContatoModel.find()
+                        .sort({criadoEm: -1})
+   for (let i = 0; i < contatos.length; i++) {
+      console.log(contatos[i])
+      if(contatos[i].email == this.body.email){
+         this.errors.push('Contato já existe')
+         break;
+      }
+      if(contatos[i].telefone == this.body.telefone){
+         this.errors.push('Contato já existe')
+         break;
+      }
+   }
+
 }
 
 // Método estáticos

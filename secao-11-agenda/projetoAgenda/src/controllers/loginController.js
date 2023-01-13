@@ -1,9 +1,8 @@
-const { async } = require('regenerator-runtime')
 const Login = require('../models/LoginModel')
 
 exports.index =(req, res)=>{
    if(req.session.user) {
-      return res.render('index')
+      return res.render('login-logado')
    }
    res.render('login')
 }
